@@ -1,0 +1,43 @@
+title:              Il Danzatore Stanco
+description:
+disqus_shortname:   vinc3nt
+url:                https://ilvinc3nt.github.io/ildanzatorestanco/
+permalink:         /:categories/:day/:month/:year/:title.html
+
+# My information
+  owner:          Vinc B
+  name:           Vinc B
+  avatar:
+  bio:
+  email:
+  description:    Blogging about all
+
+  # Social networks links
+  twitter:        _vinc3nt_
+  facebook:
+  github:         ilvinc3nt
+  telegram:
+  snapchat:
+  stackexchange:
+  linkedin:
+  instagram:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    https://plus.google.com
+
+# Assets
+#
+# We specify the directory (use @imports)
+sass:
+  sass_dir:          _scss
+  style:            :compressed
+
+
+timezone:      Europe/Rome
+highlighter:   pygments
+
+gems: [jekyll-paginate]
+        paginate: 5
+        paginate_path: "page:mum"
+
+#Insert here Google Analytics stuff
