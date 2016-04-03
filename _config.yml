@@ -1,8 +1,8 @@
-title:              Il Danzatore Stanco
-description:
-disqus_shortname:   vinc3nt
-url:                https://ilvinc3nt.github.io/ildanzatorestanco/
-permalink:         /:categories/:day/:month/:year/:title.html
+title:Il Danzatore Stanco
+description:none
+disqus_shortname:vinc3nt
+url:localhost
+permalink:/:categories/:day/:month/:year/:title.html
 
 # My information
   owner:          Vinc B
@@ -37,8 +37,25 @@ timezone:      Europe/Rome
 highlighter:   rouge
 markdown:      kramdown
 
+# Plugins
 gems: [jekyll-paginate]
         paginate: 5
         paginate_path: "page:mum"
 
 #Insert here Google Analytics stuff
+
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  enable_coderay: false
+
+  coderay:
+    coderay_wrap:              div
+    coderay_line_numbers:      inline
+    coderay_line_number_start: 1
+    coderay_tab_width:         4
+    coderay_bold_every:        10
+    coderay_css:               style
