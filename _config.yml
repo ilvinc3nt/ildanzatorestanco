@@ -30,11 +30,12 @@ permalink:         /:categories/:day/:month/:year/:title.html
 # We specify the directory (use @imports)
 sass:
   sass_dir:          _scss
-  style:            :compressed
+  style:             compressed
 
 
 timezone:      Europe/Rome
-highlighter:   pygments
+highlighter:   rouge
+markdown:      kramdown
 
 gems: [jekyll-paginate]
         paginate: 5
