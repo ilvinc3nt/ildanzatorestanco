@@ -1,0 +1,28 @@
+// Fonts
+
+$base-font: 'Lato', Calibri, Arial, sans-serif;
+$heading-font: $base-font;
+$caption-font: $base-font;
+$code-font: monospace;
+$alt-font: serif;
+
+$doc-font-size: 16;
+$doc-line-height: 26;
+
+
+// set-up the body font-size / line-height
+body {
+  font-size: 0 + $doc-font-size;
+}
+
+
+// Colors
+
+
+
+
+// Screen Size
+
+$small:         'only screen and (min-width: 30em)';
+$medium:        'only screen and (min-width: 48em)';
+$large:         'only screen and (min-width: 62.5em)';
