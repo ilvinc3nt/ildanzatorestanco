@@ -1,0 +1,71 @@
+---
+layout: home
+title: ...disteso giocava con le parole
+description:
+tags:
+comments: false
+image:
+  feature: ab-1.jpg
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+
+<article>
+
+ <header>
+   <div class="entry-meta">
+
+     <span class="entry-date date published updated">
+
+        <time datetime="{{ post.date | date_to_xmlschema }}"></time>
+
+     </span>
+
+     <span class="author vcard">
+
+       <span class="fn">
+        <a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a>
+       </span>
+
+     </span>
+
+     {% if site.disqus_shortname and post.comments %}
+       <span class="entry-comments">
+         <i class="fa fa-clock-o"></i> <!-- little icon -->
+       <a href="{{ site.url }}{{ post.url }}#disqus_thread">Post Commented</a>
+       </span>
+     {% endif %}
+
+  </div>
+
+  {% if post.link %} <!-- Post Title -->
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+    {% else %}
+      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+    {% endif %}
+
+ </header>
+
+    <div class="entry-content"> <!-- truncate post and add read more -->
+
+    {% if post.content contains "<!-- more -->" %}
+    {{ post.content | split:"<!-- more -->" | first % }}
+
+    {% else %}
+    {{ post.content | strip_html | truncatewords:100 }}
+
+    <a href="{{ site.url }}{{ post.url }}" class="more-link">
+                 read more...
+             </a>
+
+    {% endif %}
+
+    </div>
+
+</article>
+
+{% endfor %}
+
+
+{% include pagination.html %}
