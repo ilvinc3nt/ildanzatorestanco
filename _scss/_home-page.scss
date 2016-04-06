@@ -1,3 +1,10 @@
+//
+// ===========================================================
+// Fusion Theme
+// By: Vinc B
+// ===========================================================
+//
+
 body {
   background-color: $body-color;
   margin: 0;
@@ -71,6 +78,29 @@ body {
 	}
 
 }
+
+//Header in home page
+//---------------------------------------------------
+
+.head-title {
+  h1 {
+    color: $white;
+    font-size: 55px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 4px $text-shadow;
+ }
+
+  h2 {
+    color: $white;
+    font-size: 21px;
+    font-style: italic;
+    text-shadow: 1px 1px 4px $text-shadow;
+ }
+
+}
+//---------------------------------------------------
 
 // Single Post and Page
 // --------------------------------------------------
