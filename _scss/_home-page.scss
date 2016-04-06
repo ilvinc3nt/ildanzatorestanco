@@ -82,6 +82,53 @@ body {
 //Header in home page
 //---------------------------------------------------
 
+.entry-header {
+  overflow: hidden;
+}
+
+.entry-image {
+  height: 200%;
+  left: -50%;
+  min-height: 400px;
+  position: relative;
+  width: 200%;
+
+  img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}
+
+.entry-image::after {
+  background-color: $backg-color-header2;
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.inner-container {
+  padding-top: 100px;
+  position: fixed;
+  //position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+
+}
+
+.inner-head {
+  background-color: $backg-color-header;
+  font-family: 'Cantarell',sans-serif;
+}
+
 .head-title {
   h1 {
     color: $white;
