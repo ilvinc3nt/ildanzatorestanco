@@ -1,13 +1,19 @@
-//---
-//sitemap: false
-//---
+---
+#sitemap: false
+---
 
-// Base Part
-@import 'variables';
-@import 'vendor/font-awesome/font-awesome';
+/*
+ *
+ *  Insert Css in style easily
+ *
+ *  
+ *
+ *
+*/
 
-// Components
-//@import "home";
-
-// Misc
-//@import "rouge";
+// Partials
+@import "variables";
+@import "mixins";
+@import "home-page";
+@import "vendor/font-awesome/font-awesome";
+@import 'pagination';
