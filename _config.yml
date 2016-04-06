@@ -1,61 +1,84 @@
-title:Il Danzatore Stanco
-description:none
-disqus_shortname:vinc3nt
-url:localhost
-permalink:/:categories/:day/:month/:year/:title.html
+#Folders
+layouts_dir     : _layouts
+includes_dir    : _includes
+sass:
+ sass_dir        : _scss
+ style           : compressed
+
+post_layout      : post
+page_layout      : page
+post_ext         : md
+page_ext         : md
+
+#Conversion
+highlighter: rouge
+markdown: kramdown
+
+title:              Il Danzatore Stanco
+description:
+disqus_shortname:   vinc3nt
+url:  #https://github.com/ilvinc3nt/ildanzatostanco # the base hostname & protocol for your site
+#baseurl:  # the subpath of your site, e.g. /blog
 
 # My information
-  owner:          Vinc B
-  name:           Vinc B
-  avatar:
-  bio:
-  email:
-  description:    Blogging about all
+owner:          Vinc B
+name:           Vinc B
+avatar:
+bio:
+email:
 
-  # Social networks links
-  twitter:        _vinc3nt_
-  facebook:
-  github:         ilvinc3nt
-  telegram:
-  snapchat:
-  stackexchange:
-  linkedin:
-  instagram:
-  tumblr:
+# Social networks links
+social:
+  - title :"twitter"
+      url :"https://twitter.com/_vinc3nt_?lang=it"
+  - title :"github"
+      url :"https://github.com/ilvinc3nt"
+  #facebook:
+  #telegram:
+  #snapchat:
+  #stackexchange:
+  #linkedin:
+  #instagram:
+  #tumblr:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    https://plus.google.com
+  #google_plus:    https://plus.google.com
 
-# Assets
-#
-# We specify the directory (use @imports)
-sass:
-  sass_dir:          _scss
-  style:             compressed
-
-
-timezone:      Europe/Rome
-highlighter:   rouge
-markdown:      kramdown
+#Outputting
+permalink: /:categories/:day/:month/:year/:title/
+timezone: Europe/Rome
+locale: it_IT
+future: true
 
 # Plugins
-gems: [jekyll-paginate]
-        paginate: 5
-        paginate_path: "page:mum"
+gems: [jekyll-paginate, redcarpet]
+
+paginate: 5
+paginate_path: "page:mum"
 
 #Insert here Google Analytics stuff
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
 
+#Markdown Processor
+redcarpet:
+  extention: ["with_toc_data"]
 
 kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
   enable_coderay: false
 
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
+coderay:
+  coderay_line_numbers:      nil
+  coderay_line_number_start: 1
+  coderay_tab_width:         4
+  coderay_bold_every:        10
+  coderay_css:               class
+
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

@@ -1,0 +1,202 @@
+body {
+  background-color: $body-color;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+//.......................................Main
+.entry {
+  @include clearfix; //add mixins to style
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    word-wrap: break-word;
+ }
+}
+
+.entry-content {
+  @include font-size(16);
+	// Dotted line underlines for links
+  p > a,
+	li > a {
+    border-bottom: 1px dotted lighten($link-color, 50);
+
+    &:hover {
+      border-bottom-style: solid;
+		}
+	}
+}
+
+//section
+
+.content-header-title {
+  margin: 30px 0 0;
+  text-align: center;
+
+  h1 {
+    @include font-rem(32);
+    color: lighten($base-color, 20);
+    font-weight: 700;
+    margin: 10px 20px;
+
+    @media #{$medium} {
+      @include font-rem(48);
+}
+
+    @media #{$large} {
+      @include font-rem(60);
+		}
+}
+
+  h2 {
+    @include font-rem(18);
+    color: lighten($base-color, 40);
+    margin: 0;
+    text-transform: uppercase;
+
+    @media #{$medium} {
+      @include font-rem(24);
+		}
+}
+
+  p {
+    color: lighten($base-color, 20);
+	}
+
+}
+
+// Single Post and Page
+// --------------------------------------------------
+.entry-meta {
+  @include font-rem(12);
+  color: lighten($base-color, 60);
+  text-transform: uppercase;
+
+  a {
+    color: lighten($base-color, 60);
+  }
+
+  .vcard {
+    &::before {
+      content: ' by ';
+		}
+  }
+
+  .tag {
+    @include rounded(3px);
+    background-color: lighten($base-color, 50);
+    color: $white;
+    display: -block;
+    margin: 4px;
+
+    span {
+      float: left;
+      padding: 2px 6px;
+}
+
+    .count {
+      @include border-radius(3px, 3px, 0, 0);
+      background-color: lighten($base-color, 40);
+}
+
+    &:hover {
+      background-color: lighten($base-color, 40);
+		}
+	}
+} //fine Single Post, Page
+
+.menu {
+  margin-bottom: 48px;
+}
+
+#post,                               //try remove '#'
+#page {
+  .entry-content {
+    @include rounded(3px);
+    background-color: $white;
+    box-shadow: 0 0 0 0, 0 6px 12px rgba($black, .1);
+    margin: 40px 2px 20px;
+    padding: 10px 15px;
+
+    @media #{$medium} {
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 20px 30px;
+}
+
+    @media #{$large} {
+      margin: 50px auto 30px;
+      max-width: 800px;
+      padding: 50px 80px;
+
+      > p:first-child {
+        @include font-size(20);
+			}
+		}
+	}
+
+  .entry-meta {
+    margin: 50px 30px 30px;
+    text-align: center;
+	}
+}
+
+.entry-tags {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.tag-heading,
+.year-heading {
+  margin-top: 0;
+}
+
+// Permalink icon for link post
+.permalink {
+  margin-right: 7px;
+}
+
+// Post Index
+// --------------------------------------------------
+#post-index {
+  #main {
+    margin: 40px 2px 20px;
+
+    @media #{$medium} {
+      margin-left: 20px;
+      margin-right: 20px;
+	}
+
+    @media #{$large} {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      max-width: 800px;
+		}
+	}
+
+  article {
+    @include rounded(3px);
+    background-color: $white;
+    box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color, .1);
+    margin-bottom: 20px;
+    padding: 25px 15px;
+
+    @media #{$medium} {
+      padding: 30px;
+		}
+
+    @media #{$large} {
+      margin-bottom: 30px;
+      padding: 50px 80px;
+		}
+	} //fine article
+
+}//fine post-index, main
