@@ -89,7 +89,7 @@ body {
   //width: 100%;
 
   @media #{$medium} {
-		background-color: $header-color;
+    background-color: $header-color;
     min-height: 300px;
 	}
 
@@ -135,15 +135,18 @@ body {
 .inner-head {
   background-color: $backg-color-header;
   font-family: 'Cantarell',sans-serif;
+  height: 150px;
 }
 
-.head-title {
+.header-title {
   h1 {
     color: $white;
     font-size: 55px;
     font-weight: 500;
+    height: 45px;
     margin-bottom: 20px;
     margin-top: 15px;
+    padding-top: 22px;
     text-shadow: 1px 1px 4px $text-shadow;
  }
 
